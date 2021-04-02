@@ -38,8 +38,9 @@ public class MoodAnalyser
         }
     }
 
-    public static void main(String[] args) throws MoodInvalidException {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
+    public static void main(String[] args) throws MoodInvalidException
+    {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
         String s = moodAnalyser.analyseMood();
     }
 }

@@ -8,8 +8,6 @@ public class MoodAnalyserTest
     @Test
     public void givenSad_returnSad() throws MoodInvalidException
     {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
-        String mood = MoodAnalyser.analyseMood();
-        Assert.assertEquals("HAPPY",mood);
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
     }
 }
