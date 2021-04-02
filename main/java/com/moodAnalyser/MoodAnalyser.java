@@ -13,28 +13,32 @@ public class MoodAnalyser
     //constructor with parameters
     public MoodAnalyser(String message)
     {
-        this.message = message;
+        MoodAnalyser.message = message;
     }
 
     //method to check message
-    public static String analyseMood()
+    public static String analyseMood() throws MoodInvalidException
     {
         try
         {
+            if(MoodAnalyser.message.length() == 0)
+            {
+                throw new MoodInvalidException(MoodInvalidException.ExceptionType.ENTERED_EMPTY, "Please enter valid message!");
+            }
+
             if (MoodAnalyser.message.contains("SAD")) {
                 return "SAD";
             } else {
                 return "HAPPY";
             }
         }
-        catch(NullPointerException npe)
+        catch(NullPointerException | MoodInvalidException npe)
         {
-            return "HAPPY";
+            throw new MoodInvalidException(MoodInvalidException.ExceptionType.ENTERED_NULL, "Please enter valid message!");
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws MoodInvalidException {
         MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
         String s = moodAnalyser.analyseMood();
     }
