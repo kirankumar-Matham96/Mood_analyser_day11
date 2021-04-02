@@ -2,9 +2,25 @@ package com.moodAnalyser;
 
 public class MoodAnalyser
 {
-    public String alyseMood(String message)
+    static String message;
+
+    //constructor with no parameters
+    public MoodAnalyser()
     {
-        if(message.contains("I am in Sad Mood"))
+        message = "SAD";
+    }
+
+    //constructor with parameters
+    public MoodAnalyser(String message)
+    {
+        this.message = message;
+    }
+
+    //method to check message
+    public String analyseMood()
+    {
+        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        if(moodAnalyser.message.contains("SAD"))
         {
             return "SAD";
         }
@@ -17,7 +33,6 @@ public class MoodAnalyser
     public static void main(String[] args)
     {
         MoodAnalyser moodAnalyser = new MoodAnalyser();
-        String mood = "I am in Sad Mood";
-        String s = moodAnalyser.alyseMood(mood);
+        String s = moodAnalyser.analyseMood();
     }
 }
