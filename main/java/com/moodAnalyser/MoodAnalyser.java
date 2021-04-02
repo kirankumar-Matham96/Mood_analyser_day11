@@ -19,8 +19,8 @@ public class MoodAnalyser
     //method to check message
     public String analyseMood()
     {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
-        if(moodAnalyser.message.contains("I am in Sad Mood"))
+        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        if(moodAnalyser.message.contains("SAD"))
         {
             return "SAD";
         }
