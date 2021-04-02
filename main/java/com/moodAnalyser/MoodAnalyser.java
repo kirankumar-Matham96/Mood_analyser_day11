@@ -17,9 +17,10 @@ public class MoodAnalyser
     }
 
     //method to check message
-    public static String analyseMood()
+    public String analyseMood()
     {
-        if(MoodAnalyser.message.contains("I am in Sad Mood"))
+        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Sad Mood");
+        if(moodAnalyser.message.contains("I am in Sad Mood"))
         {
             return "SAD";
         }
@@ -31,7 +32,7 @@ public class MoodAnalyser
 
     public static void main(String[] args)
     {
-        MoodAnalyser moodAnalyser = new MoodAnalyser("I am in Happy Mood");
+        MoodAnalyser moodAnalyser = new MoodAnalyser();
         String s = moodAnalyser.analyseMood();
     }
 }
