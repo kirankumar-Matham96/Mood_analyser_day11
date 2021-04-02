@@ -8,6 +8,6 @@ public class MoodAnalyserTest
     @Test
     public void givenSad_returnSad() throws MoodInvalidException
     {
-        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
     }
 }

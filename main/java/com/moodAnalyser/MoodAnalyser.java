@@ -40,7 +40,7 @@ public class MoodAnalyser
 
     public static void main(String[] args) throws MoodInvalidException
     {
-        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        MoodAnalyser moodAnalyser = new MoodAnalyser("");
         String s = moodAnalyser.analyseMood();
     }
 }
