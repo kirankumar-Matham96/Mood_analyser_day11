@@ -19,11 +19,15 @@ public class MoodAnalyser
     //method to check message
     public static String analyseMood()
     {
-        if(MoodAnalyser.message.contains("SAD"))
+        try
         {
-            return "SAD";
+            if (MoodAnalyser.message.contains("SAD")) {
+                return "SAD";
+            } else {
+                return "HAPPY";
+            }
         }
-        else
+        catch(NullPointerException npe)
         {
             return "HAPPY";
         }
